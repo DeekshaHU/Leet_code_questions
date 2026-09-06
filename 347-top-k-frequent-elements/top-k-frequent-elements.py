@@ -6,6 +6,8 @@ class Solution:
                 freq[num]+=1
             else:
                 freq[num]=1
-        sorted_nums=sorted(freq,key=freq.get,reverse=True)
-        return sorted_nums[:k]
+        sorted_num=sorted(freq,key=freq.get,reverse=True)
+        return sorted_num[:k]
+        
+        
         
