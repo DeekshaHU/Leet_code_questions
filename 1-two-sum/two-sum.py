@@ -4,7 +4,7 @@ class Solution:
         for i in range(len(nums)):
             complement=target-nums[i]
             if complement in dic:
-                return [dic[complement],i]
+                return [i,dic[complement]]
             dic[nums[i]]=i
 
 
