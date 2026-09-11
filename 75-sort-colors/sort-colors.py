@@ -3,17 +3,27 @@ class Solution:
         """
         Do not return anything, modify nums in-place instead.
         """
-        low=0
-        mid=0
-        high=len(nums)-1
-        while mid<=high:
-            if nums[mid]==0:
-                nums[low],nums[mid]=nums[mid],nums[low]
-                low=low+1
-                mid=mid+1
-            elif  nums[mid]==1:
-                mid=mid+1
-            else:
-                nums[mid],nums[high]=nums[high],nums[mid]
-                high=high-1
+        count1=0
+        count2=0
+        count3=0
+        for i in nums:
+            if i==0:
+                count1+=1
+            if i==1:
+                count2+=1
+            if i==2:
+                count3+=1
+        nums.clear()
+        for i in range(count1):
+            nums.append(0)
+        for i in range(count2):
+            nums.append(1)
+        for i in range(count3):
+            nums.append(2)
+        return nums
+
+
+        
+
             
+        
