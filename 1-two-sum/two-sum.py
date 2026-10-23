@@ -1,17 +1,10 @@
 class Solution:
-    def twoSum(self, nums: List[int], target: int) -> List[int]:
-        dic={}
+    def twoSum(self, nums: list[int], target: int) -> list[int]:
+        dict={}
         for i in range(len(nums)):
-            complement=target-nums[i]
-            if complement in dic:
-                return [i,dic[complement]]
-            dic[nums[i]]=i
-
-
-
-
-
-        
-
-
+            com=target-nums[i]
+            if com in dict :
+                return [dict[com],i]
+            dict[nums[i]]=i
+            
         
