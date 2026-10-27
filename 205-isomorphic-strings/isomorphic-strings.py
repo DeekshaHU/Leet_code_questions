@@ -1,22 +1,17 @@
 class Solution:
     def isIsomorphic(self, s: str, t: str) -> bool:
-        if s=="bbbaaaba":
-            return False
-        if s=="abba":
-            return False
-        if s =="aaabbbcccaaabbbccc":
-            return False
+        map1={}
+        map2={}
         if len(s)==len(t):
             for i in range(len(s)):
-                x=s.count(s[i])
-                y=t.count(t[i])
-                if x!=y:
+                a=s[i]
+                b=t[i] 
+                if a in map1 and map1[a]!=b:
                     return False
+                if b in map2 and map2[b]!=a:
+                    return False
+
+                map1[a]=b
+                map2[b]=a
         return True
-
-
-
-
-
-        
         
